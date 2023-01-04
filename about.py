@@ -1,6 +1,6 @@
 """
 This file provides standard information to
-help with debugging. 
+help with debugging.
 
 This file is named:   about.py
 This module is named: about
@@ -45,7 +45,7 @@ def get_data_directory_path():
 
 
 def get_data_file_path(fn):
-    """Return the absolute path to a data file given just the file name (fn)."""
+    """Return the absolute path to a data file given the file name (fn)."""
     dir = get_data_directory_path()
     fullPath = os.sep.join([dir, fn])
     return fullPath
@@ -58,7 +58,7 @@ def get_header(fn):
 {divider}
 {divider}
 
- Welcome! 
+ Welcome!
 
  It's {datetime.date.today()} at {datetime.datetime.now().strftime("%I:%M %p")}
 
