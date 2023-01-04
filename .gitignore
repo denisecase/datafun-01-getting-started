@@ -1,3 +1,42 @@
+#### IGNORE / DON't COMMIT THESE FILES TO THE REPO
+
+# Files with secrets (e.g. our email and password)
+
+.env
+.env.toml
+.env.yaml
+
+############# MAC #############
+
+# Ignore some files that might be added by macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+############# VS CODE #############
+
+# Ignore some folders and files that might be used by VS Code
+.vscode/*
+
+# Un-ignore some specfic files as needed
+#
+# In Python, not recommended as 
+# each environment may be very different
+#
+#!.vscode/settings.json
+#!.vscode/tasks.json
+#!.vscode/launch.json
+#!.vscode/extensions.json
+#!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+############# PYTHON #############
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -89,7 +128,7 @@ ipython_config.py
 #   However, in case of collaboration, if having platform-specific dependencies or dependencies
 #   having no cross-platform support, pipenv may install dependencies that don't work, or not
 #   install all needed dependencies.
-#Pipfile.lock
+Pipfile.lock
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
