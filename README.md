@@ -101,7 +101,7 @@ In general, after installing and configuring any new tool:
 - Click and explore the menus, tabs, icons. Try to get an overview of what is possible and how things are arranged. 
 - Hovering the mouse over an icon in VS Code will provide a 'tooltip' with more information.
 
-## Task 2. - Install Git
+## Task 2. Install Git
 
 If you don't already have Git, follow the instructions. 
 If you think you might, try checking the version as shown below.
@@ -116,7 +116,7 @@ Verify installation by checking the version. Open a new Terminal (macOS) or Powe
 `git version`
 
 
-## Task 3. - Install Miniconda3
+## Task 3. Install Miniconda3
 
 If you don't already have Python, follow these instructions. 
 
@@ -173,7 +173,7 @@ Congratulations - that's a great start - being able to execute Python commands m
 
 ✅ Accessing Python interactive mode is a generally useful skill in analytics.
 
-## Task 4. - Install VS Code Editor
+## Task 4. Install VS Code Editor
 
 Install the **VS Code** editor from here: <https://code.visualstudio.com/download>.
 
@@ -187,7 +187,7 @@ Explore the information provided - check out the menus.
 
 _Recommendation: In VS Code, verify File / Autosave is checked._  
 
-## Task 5. - Install VS Code Extension: Python
+## Task 5. Install VS Code Extension: Python
 
 After VS Code installs, install the VS Code Python extension from here: <https://marketplace.visualstudio.com/items?itemName=ms-python.python>.
 
@@ -196,7 +196,7 @@ If you have troubles installing, click the link that says "Trouble Installing?" 
 Once you install the extension, it'll ask if you want to get started with Jupyter Notebooks.
 Ignore this for now - close that tab in VS Code.
 
-## Task 6. - Install VS Code Extension: GitHub Repositories
+## Task 6. Install VS Code Extension: GitHub Repositories
 
 In VS Code, look at the icons down the left. Look for 4 squares.
 Mouse over it to see the tooltip "Extensions". Click it. 
