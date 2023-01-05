@@ -1,4 +1,6 @@
 # Paste your interactive Python practice sesssion here
+# See course site for details.
+#
 # Windows                 Mac
 # CTRL A = select all = Command A
 # CTRL C = copy =       Command C
