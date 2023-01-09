@@ -399,6 +399,12 @@ Suggestion: If you're in VS Code, On Windows, trying to run a script or execute 
 Suggestion: Sure. If VS Code suggests an extension, it's often good to go ahead and try it. 
 Read up a bit if curious, but the suggestions are usually helpul. 
 
+### Issue: VS Code Extension for GitHub - which one?
+
+Suggestion: VS Code Extension: [GitHub Repositories](https://marketplace.visualstudio.com/items?itemName=GitHub.remotehub) seems to work well and may especially good for beginners. 
+If you get a recommendation to use [GitHub Pull Requests and Issues]
+ (https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) instead, you can try that. It might be more suitable for experienced developers. [Here's a good article for getting started](https://www.techrepublic.com/article/add-github-vs-code/). You're encouraged to share your thoughts in the discussions.
+
 ## Additional Resources
 
 1. For more information about editing Markdown task lists, see [how to mark a task complete](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists).
