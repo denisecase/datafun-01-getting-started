@@ -389,6 +389,12 @@ Toggle it in Mac Finder with Command Shift . ("command shift dot").
 Your repo has a hidden .git folder that maintains changes to your code.
 Do a web search to learn more as needed.
 
+## Troubleshooting
+
+### Issue: VS Code - No Source Control Icon
+
+Suggestion: If you're in VS Code, and you don't see the Source Control icon with a blue bubble, right-click on the sidebar icons, and make sure "Source Control" is checked.  
+
 
 ## Additional Resources
 
