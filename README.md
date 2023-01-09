@@ -278,6 +278,11 @@ Once opened, explore - consider these questions:
 
 For more information about options for executing a Python program in VS Code, see [Run Hello World](https://code.visualstudio.com/docs/python/python-tutorial#_run-hello-world).
 
+:warning: On Windows, if you get an error "conda: The term 'conda' is not recognized as a name of a cmdlet, function, script file, or executable program."
+Your VS Code terminal is likely Powershell (look for a the PS before your path). 
+We want to switch it to "Command Prompt" for Python commands. 
+From the VS Code menu / View / Command Palette. Start typing 'Terminal: Select Default Profile' until it appears, click it and change from Powershell to Command Prompt. 
+
 The about module provides a lot of useful information about your Python environment. 
 Review these paths carefully - it tells a lot about your Python installation and environment. 
 
