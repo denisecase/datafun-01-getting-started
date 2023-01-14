@@ -50,12 +50,5 @@ if user_choice == buddy_choice:
 # right-click on the code and select "Format Document"
 
 # Run the code, and play the game a few times.
-# Copy the output from the terminal and paste it into the
-# docstring comment below.
-# --------------------------------------------------------------------
-"""
-
-
-
-
-"""
+# Copy the output from the terminal and paste it into 
+# a new file named xtra_p2out.txt.
