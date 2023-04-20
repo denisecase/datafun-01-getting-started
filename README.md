@@ -2,101 +2,159 @@
 
 > An opinionated way to get started with Python for data analytics
 
-Set yourself up for productivity and collaboration.
-
 We assume no prior programming experience and that you want to 
 get productive as quickly as possible.
 
-## Task 1. Sign Up for GitHub (free)
+We set up a professional environment using professional tools from the start.
+
+## IMPORTANT
+
+- Spelling matters
+- Capitalization matters
+- Spacing matters
+
+Computers are pedantic - if/when things don't work, check spelling, capitalization, and spacing first.
+
+-----
+
+## On the Web: Sign Up for GitHub (free)
 
 Sign up for a free account with [GitHub](https://github.com/), 
 a code hosting platform that manages a vast number of programming projects. 
+Join over 100 million developers and browse over 28 million public repositories.
 
-## Task 2. Install Git (for managing code and data files)
+-----
 
-Install - and configure - your Git installation using this guide: <https://github.com/git-guides/install-git>.
+## On Your Machine: Install Git, Python, VS Code
 
-Except do NOT install GitHub Desktop (we'll use VS Code for git) and go down to the instructions for your operating system. 
+Install some tools on your machine. 
 
-Verify installation by checking the version. 
+### Install Git (for managing code and data files)
+
+DO NOT install GitHub Desktop (we'll use VS Code instead) and go down to the instructions for your operating system. 
+
+1. Read about Git at https://git-scm.com/
+2. Install Git by clicking the recommended download button for your machine. "Standalone installer 64 bit" is a common choice on Windows.
+3. This guide has more information (do NOT install GitHub Desktop): https://github.com/git-guides/install-git
+
+Verify your installation. 
+
+1. Find Git on your machine.
+2. Check the version as described below.
+
 Open a new Terminal (macOS) or PowerShell (Windows/macOS) and type the following, then hit return/enter:
 
-`git version`
+```
+git version
+```
 
-Configure git with your email and username before continuing.
+### Configure Git with your email and username
 
-## Task 3. Install Miniconda3 (to get Python and Conda)
+Configure Git so you have the ability to commit code.
 
-If you've installed the full Anaconda as recommended in the textbook, that's perfect - don't also install Miniconda3. 
-Anaconda is larger and has more Python modules built-in. 
+In the commands below:
 
-Install Python 3 using the **Miniconda3** distribution by [following the instructions](https://docs.conda.io/en/latest/miniconda.html).
-Installations depend on  operating system and machine (most will be 64-bit). Note:
+- Change "John Doe" to your name.
+- Change johndoe@example.com to your email (the one you used for GitHub).
 
-_"On Windows, macOS, and Linux, it is best to install Miniconda **for the local user**, which does not require administrator permissions and is the most robust type of installation."._ 
+Open Git Bash or Terminal and configure your global username and email. 
 
-**Miniconda3** includes Python and **conda** (an important tool for managing Python packages and environments). 
 
-Once installation is complete, run the following command to initialize the conda environment:
+```shell
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
 
-`conda init`
+These may be shown with a $. 
+If you see that, don't type the $.  
+The dollar sign is used to indicate the type of terminal used to run the command. 
+In this case, Git Bash. 
 
-Close and reopen your terminal window or command prompt, 
-and you should now be able to use the conda command to manage your Python environment.
-Open a new Terminal (macOS) or open Anaconda Prompt (Windows) and type the following. 
-Hit return or enter after each line.
+```shell
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+```
+
+Verify your configuration.
+
+1. Verify your global username
+2. Verify your global email
+3. See all the git config entries
 
 ```
-conda update conda
+git config user.name
+git config user.email
+git config --list
+```
+
+Git is widely used in industry and academia. Congratulations on getting started! 
+
+### Install Python 3
+
+Download and install Python 3.
+
+1. Read about Python at https://www.python.org/ 
+2. Click "Downloads" tab and choose (or accept) the best recommendation for your machine. 
+3. Start the executable. 
+4. Important: Click "Add python.exe to PATH" and continue.
+
+Verify your installation. 
+
+1. Find it on your machine.
+2. Check the default Python version. You may have several. More on this later.
+
+```
 python --version
-conda list
 ```
 
+### Install VS Code Editor
 
-## Task 4. Install VS Code (to help with writing code)
+Download and install VS Code and add helpful extensions.
 
-Install the **VS Code** editor from here: <https://code.visualstudio.com/download>.
+1. Read about VS Code at https://code.visualstudio.com/ 
+2. Click "Download" button and follow instructions for your machine.
 
 If you need more help, use the official VS Code docs. 
 For example, additional Mac instructions are [here](https://code.visualstudio.com/docs/setup/mac).
 
+Recommended
+
 - Add VS Code to your Dock (macOS)
 - Add VS Code to your Start Menu (Windows).
-- Open VS Code. 
+
+Open VS Code
+
 - Explore the menus. 
-- Mouse over the icons down the left side. These are key. 
 - Verify File / Autosave is checked.
+- Mouse over the icons down the left side. These are key. 
+- Look for an icon with 4 squares.
+- Mouse over it to see the tooltip "Extensions". Click it. 
+- Search for the Extension [Python by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- Install it to your VS Code (it adds a lot of Python-specific functionality.
 
-## Task 5. Install VS Code Extension: Python
+Coding With VS Code
 
-After VS Code installs, install the VS Code Python extension from here: <https://marketplace.visualstudio.com/items?itemName=ms-python.python>.
+1. Scan the article [Programming Languages in VS Code](https://code.visualstudio.com/docs/languages/overview) 
+2. Scan the article [Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
 
-- If you have issues, click the link that says "Trouble Installing?"
-- It will show you how to add extensions from within VS Code.
+### After Installs, Restart To Update Your Environment
 
-Once you install the extension, it'll ask if you want to get started with Jupyter Notebooks.
-Ignore this for now - close that tab in VS Code.
+After doing any significant installation, restart. 
 
-## Task 6. Install VS Code Extension: GitHub Repositories
+After adding extensions, you may be asked to restart VS Code.
 
-In VS Code, look at the icons down the left. Look for 4 squares.
-Mouse over it to see the tooltip "Extensions". Click it. 
+After installing Git, Python, or tools that affect your environment, 
+you may need to restart your terminal, IDE, and sometimes, your machine before continuing. 
 
-On the top of the primary left side panel, you'll see the installed extensions. 
+Ensure your environments are fully updated.
 
-If **GitHub Repositories** is not installed, find it in the recommended list of extensions below, do a web search, or find it here: <https://marketplace.visualstudio.com/items?itemName=github.remotehub>
+-----
 
-✅ Leveraging an IDE is an important skill and can increase productivity significantly.
+## On the Web: Fork this Repo (Copy it into Your GitHub)
 
-## After Installs, Restart 
+Now that your machine is ready - let's go back to the web to get some code. 
 
-_Recommendation: After doing any significant installation, it may help to restart. After adding extensions, you may restart VS Code, after Git, Python, or tools that affect your environment, you may need to restart your terminal, IDE, and sometimes, your machine before continuing. Ensure your environments are fully updated._
-
-## Task 7. Fork (Copy) this Repo (to Your GitHub)
-
-Now that your machine is ready - let's get some code. 
-
-First, fork (copy) this repo into **your** GitHub account. 
+First, fork this repo (copy it into your GitHub account). 
 
 1. Open your browser to <https://github.com/denisecase/datafun-01-getting-started>.
 1. Look at the URL and the web page - note the account is denisecase.
@@ -107,7 +165,7 @@ First, fork (copy) this repo into **your** GitHub account.
 
 Forking is just a term for copying a repo from one account to another.
 
-## Task 8. Clone Your Repo (down to your machine)
+## Clone Your Repo (down to your machine)
 
 Now clone your new GitHub repo down to the Documents folder on your local machine. 
 
@@ -125,11 +183,11 @@ When complete, verify you have a new folder in your Documents directory:
 
 `Documents/datafun-01-getting-started`
 
-## Task 9. Explore Repo in VS Code (on your machine)
+## On Your Machine: Explore Repo in VS Code
 
 Explore your new project repo/folder/directory in VS Code. 
 
-## Task 10. Execute Python Scripts
+## On Your Machine: Execute Python Scripts
 
 1. Click on the about.py file to open it for editing.
 1. Can you figure out how to run the Python file? Hint: look for a "play" icon ▶️.
@@ -148,8 +206,7 @@ Review these paths carefully - it tells a lot about your Python installation and
 Open, read, and run each remaining Python script (each file will have a .py extension) in order.
 You don't need to fully understand the code yet. 
 
-
-## Task 11. Check the Boxes
+## Edit Markdown
 
 Next, edit this Markdown file to record how things went.
 
@@ -157,7 +214,7 @@ Next, edit this Markdown file to record how things went.
 1. If any could not be completed, leave them as they are.  
 1. Try to complete all but the last one.
 
-## Task 12. Commit Changes and Push to GitHub
+## Commit Changes and Push to GitHub
 
 Now it's time to get the local work you did (on your machine), 
 back up to the cloud repo in GitHub.
@@ -170,18 +227,16 @@ then git push them up to GitHub.
 
 Change the open boxes [ ] below to checked boxes [x] as you complete the tasks.
 
-- [ ] Task 1. Sign up for GitHub
-- [ ] Task 2. Install (and configure) Git
-- [ ] Task 3. Install Miniconda3 (or other)
-- [ ] Task 4. Install VS Code
-- [ ] Task 5. Install VS Code Extension: Python
-- [ ] Task 6. Install VS Code Extension: GitHub Repositories
-- [ ] Task 7. Fork this repo into your account
-- [ ] Task 8. Clone your new GitHub repo down
-- [ ] Task 9. Explore the repo in VS Code
-- [ ] Task 10. Execute a Python script.
-- [ ] Task 11. Check the boxes (edit a Markdown file)
-- [ ] Task 12. Commit changes (with a message!) and push to GitHub
+- [ ] Sign up for GitHub
+- [ ] Install (and configure) Git
+- [ ] Install Python 3 (or other)
+- [ ] Install VS Code and extensions
+- [ ] Fork a repo into your GitHub
+- [ ] Clone your new GitHub repo down to your machine
+- [ ] Explore your repo in VS Code
+- [ ] Execute a Python script.
+- [ ] Edit a Markdown file
+- [ ] Commit changes (with a message!) and push/sync to GitHub
 
 Finally - after your initial commit and push, you can check the last box. 
 Check the box, commit your changes (with a message!), and push/sync again. 
