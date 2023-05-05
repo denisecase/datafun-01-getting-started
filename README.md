@@ -5,8 +5,6 @@
 We assume no prior programming experience and that you want to 
 get productive as quickly as possible.
 
------
-
 ## IMPORTANT
 
 When working with computers, commands, and Python:
@@ -15,11 +13,11 @@ When working with computers, commands, and Python:
 - **Capitalization** is critical
 - **Spacing** is critical
 
-Computers are terribly pedantic. When things don't work, check spelling, capitalization, and spacing first.
+Computers are pedantic. When things don't work, check spelling, capitalization, and spacing first.
 
 -----
 
-## On the Web (GitHub, Fork)
+## On the Web (GitHub / Fork)
 
 ### Sign Up for GitHub
 
@@ -54,12 +52,12 @@ Install three important tools on your machine:
 
 ### Install Git (for managing code and data files)
 
-1. Installing tools from the web can be a bit painful, but it's a very valuable, widely-used skill. 
+1. Installing new tools from the web can be a bit painful, but it's a very valuable, widely-used skill. 
 1. Read a little bit about Git at <https://git-scm.com/>.
 1. DO NOT install GitHub Desktop (we'll use VS Code instead) - see the official instructions for your operating system. 
 1. Install Git by clicking the recommended download button for your machine. "Standalone installer 64 bit" is a common choice on Windows.
-1. This guide has more information (do NOT install GitHub Desktop): <https://github.com/git-guides/install-git>
-1. We typically verify an installation by checking the version by running a simple command.  
+1. This guide has more information (do NOT install GitHub Desktop): <https://github.com/git-guides/install-git>.
+1. We typically verify each installation by checking the version with a simple command.  
 1. Open a new PowerShell window (on Windows/Mac) or Terminal (Mac/Linux) and type the following, then hit return/enter.
 
   ```shell
@@ -100,7 +98,6 @@ Download and install Python 3.
   python --version
   ```
 
-
 ### Install VS Code Editor
 
 Download and install VS Code.
@@ -108,31 +105,6 @@ Download and install VS Code.
 1. Read a little bit about VS Code at <https://code.visualstudio.com/>.
 1. Click "Download" and follow instructions for your machine.
 1. If you need more help, use the official VS Code docs. For example, additional Mac instructions are [here](https://code.visualstudio.com/docs/setup/mac).
-1. Recommended: If Mac, add VS Code to your Dock.
-1. Recommended: If Windows, add VS Code to your Start Menu (Windows).
-
-### Open VS Code to install extensions.
-
-1. Explore the menus. 
-1. Verify File / Autosave is checked.
-1. Mouse over the icons down the left side. These are key. 
-1. Look for an icon with 4 squares.
-1. Mouse over it to see the tooltip "Extensions". Click it. 
-1. Search for the Extension [Python by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
-1. Install it to your VS Code (it adds a lot of Python-specific functionality.
-
-Whether working on a home or a project, powerful tools are worth learning. Learning the basics of VS Code can provide many happy returns.
-
-1. Scan the article [Programming Languages in VS Code](https://code.visualstudio.com/docs/languages/overview) 
-1. Scan the article [Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)
-
-### After Installs, Restart To Update Your Environment
-
-After doing any significant installation, it may help to restart. 
-
-1. After adding extensions, you may be asked to restart VS Code.
-1. After installing Git, Python, or tools that affect your environment, you may need to restart your terminal, IDE, and sometimes, your machine before continuing. 
-1. Restart as needed to ensure your environments are fully updated.
 
 -----
 
@@ -144,18 +116,22 @@ Clone your new GitHub repo down to the Documents folder on your local machine.
 
 1. Open VS Code. 
 1. From the menu: select View / Command Palette.
-1. Start typing Git: Clone and select it from the options. 
-1. Provide the URL for **your** new GitHub repo. It will have your username in the URL.
+1. Start typing Git: Clone and select it from the options. Click GitHub repo.
+1. Provide the URL for **your** new GitHub repo. It should have YOUR GitHub username in the URL.
 1. When it asks where to put it, select your Documents folder.
-1. The first time you clone, you'll be guided through a process to sign into GitHub from VS Code. 
+1. The first time you clone, you'll be guided through a process to sign into GitHub from VS Code. It's may be a slight challenge, but it's just this once. 
 1. Follow the recommendations in VS Code. 
 1. When complete, verify you have a new folder in your Documents directory: `Documents/datafun-01-getting-started`
-1. You don't need VS Code to clone a repo, but most students like it. To clone without VS Code, follow instructions [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
+1. You don't need VS Code to clone a repo, but most students prefer it. To clone without VS Code, follow instructions [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository).
 
 ### Explore and Execute Python Scripts
 
 With your newly cloned repo folder open in VS Code, we can start exploring Python.
 
+1. Click on the about.py file (or any .py file).
+1. VS Code is quite helpful and will ask if you want to install the recommended extension. 
+1. Of course! Check the recommendation (Python by Microsoft). Consider the stars and downloads. Does it look good?
+1. Click Install. When it finishes, click the Explorer (top left) icon to see your files again. 
 1. Click on the about.py file to open it for editing.
 1. Can you figure out how to run the Python file? Hint: look for a "play" icon ▶️.
 1. Click the run button (arrow) in the upper right to execute/run.
@@ -201,3 +177,10 @@ If you like, see if you can change the open boxes [ ] to checked boxes [x] below
 - [ ] Execute Python scripts
 - [ ] Edit Python scripts
 - [ ] Commit changes (with a message!) and push/sync back up to GitHub for sharing
+
+## Helpful Resources
+
+Whether working on a home or a project, powerful tools are worth learning. Learning the basics of VS Code can provide many happy returns.
+
+1. Scan the article [Programming Languages in VS Code](https://code.visualstudio.com/docs/languages/overview) 
+1. Scan the article [Python in VS Code](https://code.visualstudio.com/docs/python/python-tutorial)

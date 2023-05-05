@@ -1,37 +1,80 @@
+"""
+Purpose: Read a csv file, process the data, and write a new csv file.
+
+Author: Denise Case
+
+This file name is:   read_process_write.py
+This module name is: read_process_write
+
+CSV files are comma-separated values files.
+They are text files and very common in data analytics.
+CSV files are easy to read and write in Python.
+
+"""
+# import some free code from the Python Standard Library
 import csv
+import logging
+import pathlib
 
-# Declare a variable to hold the input file name
-input_file_name = "list_zipperout.csv"
+# Create directories if they don't exist for data and logs
+logs_dir = pathlib.Path("logs")
+logs_dir.mkdir(exist_ok=True)
+data_dir = pathlib.Path("data")
+data_dir.mkdir(exist_ok=True)
 
-# Declare a variable to hold the output file name
-output_file_name = "read_process_writeout.csv"
+# Create a log file name using the built-in __file__ variable
+module_name = pathlib.Path(__file__).stem
+log_file_name = logs_dir.joinpath(module_name + ".log")
 
-# Create a file object for input (r = read access)
-input_file = open(input_file_name, "r")
+# Set up a basic logger
+logging.basicConfig(
+    filename=log_file_name,
+    filemode="w",
+    level=logging.DEBUG,
+    format="%(asctime)s %(message)s",
+)
 
-# Create a file object for output (w = write access)
-output_file = open(output_file_name, "w")
+# Declare some variables 
+inpath = data_dir.joinpath("inputs.csv")
+outpath = data_dir.joinpath("outputs.csv")
 
-# Create a csv reader object to make it a bit easier
-csvreader = csv.reader(input_file)
+# Write input data based on our list to inputs.csv - w is for write
+with open(inpath, "w", newline="") as file_wrapper:
+    writer = csv.writer(file_wrapper)
+    # write our list to the csv file - each row is a list
+    writer.writerow(["animal", "weight_lbs", "age_years", "visit_cost"])
+    writer.writerow(["cat", 14.7, 3, 100.00])
+    writer.writerow(["dog", 89.4, 5, 100.00])
+    writer.writerow(["lizard", 0.85, 1, 100.00])
+    
+# Read our data from inputs.csv - r is for read
+datalist = []
+with open(inpath, "r", newline="") as file_wrapper:
+    rdr = csv.reader(file_wrapper)
+    datalist = list(rdr)
 
-# for each row in the csv reader object
-for csvrow in csvreader:
+logging.info(f"Read data from {inpath}:\n{datalist}")
 
-    # unpack the tuple e.g., (x,y) into variables named x and y
-    x, y = csvrow
+# Process the data as you like - we'll double the cost of each visit
+outlist = []
 
-    # process the data as desired - here we just add y squared
-    y_squared = float(y) ** 2
+# Skip the header row and process the data rows
+for row in datalist[1:]:
+    new_row = row[:3] + [float(row[3]) * 2]  # Double the visit cost
+    outlist.append(new_row)
 
-    # create a string including the additional columns
-    # end each line with a newline character \n
-    outrow = f"{x},{y},{y_squared}\n"
+# Add the header row back to the output list
+outlist.insert(0, datalist[0])
 
-    # write the string to the output file
-    output_file.write(outrow)
+# Write our processed data to outputs.csv - w is for write
+with open(outpath, "w", newline="") as output_file:
+    csv_writer = csv.writer(output_file)
+    csv_writer.writerows(outlist)
 
+logging.info(f"Wrote data to {outpath}:\n{outlist}")
 
-# close the file objects when done
-input_file.close()
-output_file.close()
+# Print logged information to the terminal
+with open(log_file_name, "r") as file:
+    print(file.read())
+
+# TODO: Rather than doubling each input, transform it in a different way.

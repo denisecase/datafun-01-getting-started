@@ -5,12 +5,7 @@ This example illustrates stats using the built-in statistics module.
 VS Code Menu / View / Command Palette / Python Interpretor
 Must be 3.10 or greater to get the correlation and linear regression.
 
-To update, try:
-conda update pythnon -y
-conda --version
-
 Uses only Python Standard Library modules.
-
 
 """
 

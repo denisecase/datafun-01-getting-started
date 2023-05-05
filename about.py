@@ -1,117 +1,60 @@
 """
-This file provides standard information to
-help with debugging.
+Purpose: Provide useful information to help with debugging.
 
-This file is named:   about.py
-This module is named: about
+Author: Denise Case
 
-It uses a built-in attribute representing the file name:
+This file name is:   about.py
+This module name is: about
 
-    print(get_header(__file__))
-
-To learn more, search:
-
-    builtin attributes python
-
+It uses a triple-quoted string to provide a description of the file.
 """
 
-# imports (all of these are from the standard library)
-
+# import some free code from the Python Standard Library
 import datetime
+import logging
 import os
+import pathlib
 import platform
 import sys
 
-# declare program constants
-# sometimes, data is kept in a folder named 'data'
-# in this repo, data is in the same directory as the source code
+# Create a logs directory if it doesn't exist
+logs_dir = pathlib.Path("logs")
+logs_dir.mkdir(exist_ok=True)
 
-data_folder = ""
-divider = "=============================================================="
+# Create a log file name using the built-in __file__ variable
+module_name = pathlib.Path(__file__).stem
+log_file_name = logs_dir.joinpath(module_name + "log")
 
-# define helper functions
+# set up a basic logger
+logging.basicConfig(filename=log_file_name, filemode='w', level=logging.DEBUG)
 
+# declare some variables
+divider_string = "============================================================="
+python_version_string  = platform.python_version()
+active_pip_env = os.environ.get('PIP_DEFAULT_ENV')
+today = datetime.date.today()
 
+# define some functions (reusuable bits of code)
 def get_source_directory_path():
     """Returns the absolute path to this source directory."""
     dir = os.path.dirname(os.path.abspath(__file__))
     return dir
 
+# log some useful information
+logging.info(divider_string)
+logging.info(divider_string)
+logging.info(f"Welcome!")
+logging.info(f"Today is {today} at {datetime.datetime.now().strftime('%I:%M %p')}")
+logging.info(f"This file is running on: {os.name} {platform.system()} {platform.release()}")
+logging.info(f"The Python version is: {python_version_string}")
+logging.info(f"The active conda environment is:  {os.environ.get('CONDA_DEFAULT_ENV') }")
+logging.info(f"The active pip environment is:    {os.environ.get('PIP_DEFAULT_ENV') }")
+logging.info(f"The active environment path is:   {sys.prefix}")
+logging.info(f"The current working directory is: {os.getcwd()}")
+logging.info(f"This source file is in:           {get_source_directory_path()}")
+logging.info(divider_string)
+logging.info(divider_string)
 
-def get_data_directory_path():
-    """Returns the absolute path to the data directory."""
-    datapath = os.sep.join([os.getcwd(), data_folder])
-    return datapath
-
-
-def get_data_file_path(fn):
-    """Return the absolute path to a data file given the file name (fn)."""
-    dir = get_data_directory_path()
-    fullPath = os.sep.join([dir, fn])
-    return fullPath
-
-
-def get_header(fn):
-    """This function prints helpful information about a file."""
-    return f"""
-
-{divider}
-{divider}
-
- Welcome!
-
- It's {datetime.date.today()} at {datetime.datetime.now().strftime("%I:%M %p")}
-
- This file is running on:    {os.name} {platform.system()} {platform.release()}
- 
- The Python version is:      {platform.python_version()}
- 
- The Python interpreter is at: 
- {sys.executable}
-
- The active environment should be either conda OR pip (one should be None):
-
-     Active conda env is: {os.environ.get('CONDA_DEFAULT_ENV') }
-     Active pip env is:   {os.environ.get('PIP_DEFAULT_ENV')}
- 
- The path to the active virtual environment is:
-
- {sys.prefix}
- 
- The Current Working Directory (CWD) where this command was launched is:
-
- {os.getcwd()}
- 
- The absolute path to the data directory is:
-
- {get_data_directory_path()}
- 
- The absolute path to this source directory is:
-
- {get_source_directory_path()}
- 
- The absolute path to this file is:
-
- {fn}
- 
-{divider}
-{divider}
-
-"""
-
-
-# -------------------------------------------------------------
-# Call some functions and execute code!
-
-# Call our print_header() function on this file to test it
-# Python provides a built-in attribute representing the file name
-# two underscores on each side of the word 'file'
-print(get_header(__file__))
-
-print_to_file = True
-
-if print_to_file:
-    # print to a file named about.txt
-    fn = "about.txt"
-    with open(fn, "w") as f:
-        f.write(get_header(__file__))
+# Print logged information to the terminal
+with open(log_file_name, 'r') as file:
+    print(file.read())
