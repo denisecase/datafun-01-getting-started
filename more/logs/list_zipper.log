@@ -1,0 +1,12 @@
+INFO:list_zipper:Starting list_zipper.py
+INFO:list_zipper:Calling the main() function and passing in the logger
+INFO:list_zipper:xtimes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+INFO:list_zipper:zipped_list = [(1, 2), (2, 5), (3, 8), (4, 20), (5, 21), (6, 23), (7, 24), (8, 27), (9, 30), (10, 31), (11, 31), (12, 32)]
+INFO:list_zipper:Script complete. See 'list_zipperout.csv' for output.
+INFO:list_zipper:Information is logged to: logs/logs\list_zipper.log
+INFO:list_zipper:The output file name is hardcoded and appears TWO TIMES in the script.
+INFO:list_zipper:This is a bad practice.
+INFO:list_zipper:Instead, we should set a variable just ONCE, and use the variable as needed.
+INFO:list_zipper:TODO: Edit the script to add a variable named outfile to hold the output file name.
+INFO:list_zipper:TODO: Edit the code in two places to use the variable instead of the hardcoded name.
+WARNING:list_zipper:Be careful. Indentation, spelling, and capitalization matter in Python.

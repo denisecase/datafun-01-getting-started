@@ -1,0 +1,4 @@
+INFO:root:Starting game_bot. The game bot's name is GameBot.
+
+INFO:root:Explained rock > scissors > paper > rock
+INFO:root:User: rock, Bot: paper. I won!

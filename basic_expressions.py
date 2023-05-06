@@ -24,23 +24,12 @@ Writing expressions in Python is like writing formulas in Excel.
  
 """
 
-# import some free code from the Python Standard Library
-import logging
-import pathlib
-
-# Create a logs directory if it doesn't exist
-logs_dir = pathlib.Path("logs")
-logs_dir.mkdir(exist_ok=True)
-
-# Create a log file name using the built-in __file__ variable
-module_name = pathlib.Path(__file__).stem
-log_file_name = logs_dir.joinpath(module_name + "log")
-
-# set up a basic logger
-logging.basicConfig(filename=log_file_name, filemode='w', level=logging.DEBUG, format='%(asctime)s %(message)s')
+from util_datafun_logger import setup_logger
+logger,logname = setup_logger(__file__)
 
 # Declare some variables 
 # TODO: Try changing the values of these variables
+# TODO: Add some new variables and calculate the area of a rectangle ()
 triangle_base = 10
 triangle_height = 5
 i = 50
@@ -55,11 +44,11 @@ sum = a + b
 difference = i - j
 
 # Log some information using f-strings (formatted strings)
-logging.info(f"triangle_area = {triangle_area}")
-logging.info(f"sum = {sum}")
-logging.info(f"difference = {difference}")
+logger.info(f"Given base={triangle_base} and height={triangle_height}, the triangle area = {triangle_area}")
+logger.info(f"Given a={a} and b={b}, the sum = {sum}")
+logger.info(f"Given i={i} and j={j}, the difference = {difference}")
 
 
-# Print logged information to the terminal
-with open(log_file_name, 'r') as file:
-    print(file.read())
+# Use built-in open() function to read the log file and print it to the terminal
+with open(logname, 'r') as file_wrapper:
+    print(file_wrapper.read())

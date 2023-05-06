@@ -28,38 +28,29 @@ input() is a built-in function that gets input from the user.
 str() is a built-in function that converts a value to a string.
 int() is a built-in function that converts a value to an integer.
 
-
+@ uses webbrowser module to open a web browser to a url
 """
-# import some free code from the Python Standard Library
-import logging
-import pathlib
 import webbrowser
 
-# Create a logs directory if it doesn't exist
-logs_dir = pathlib.Path("logs")
-logs_dir.mkdir(exist_ok=True)
-
-# Create a log file name using the built-in __file__ variable
-module_name = pathlib.Path(__file__).stem
-log_file_name = logs_dir.joinpath(module_name + "log")
-
-# set up a basic logger
-logging.basicConfig(filename=log_file_name, level=logging.DEBUG, format='%(asctime)s %(message)s')
+from util_datafun_logger import setup_logger
+logger, logname = setup_logger(__file__)
 
 # Declare some variables
 url = "https://docs.python.org/3/library/functions.html"
 number_list = [1, 2, 3, 4, 5]
+
+# Try some built-in functions like len(), min(), max()
 length = len(number_list)
 smallest = min(number_list)
 largest = max(number_list)
-hint = "HINT: In the terminal, hit up arrow to rerun a command.\n"
+hint = "HINT: In the terminal, hit up arrow to rerun a command and try again.\n"
 
 # Log some information 
-logging.info(f"url = {url}")
-logging.info(f"number_list = {number_list}")
-logging.info(f"len(number_list) = {length}")
-logging.info(f"min(number_list) = {smallest}")
-logging.info(f"max(number_list) = {largest}")
+logger.info(f"Functions url = {url}")
+logger.info(f"number_list = {number_list}")
+logger.info(f"len(number_list) = {length}")
+logger.info(f"min(number_list) = {smallest}")
+logger.info(f"max(number_list) = {largest}")
 
 # print an empty line to the terminal
 print()
@@ -74,10 +65,10 @@ name = input("What's your name? (type your name and hit enter):")
 message = "Hello " + name.capitalize() + "!"
 print(message)
 print()
-logging.info(f"message = {message}")
+logger.info(f"message = {message}")
 
 response = input("Would you like to see all the built-in functions? (y/n)")
-logging.info(f"response = {response}")
+logger.info(f"response = {response}")
 print(f"You said {response}!")
 print(f"{hint}")
 
@@ -90,4 +81,4 @@ if response == "y":
     print("We'll learn more about them later.")
     print()
 
-# TODO: Try running this with different responses n, y, other...
+# TODO: Run with different responses n, y, other...

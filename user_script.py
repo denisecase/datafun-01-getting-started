@@ -1,3 +1,0 @@
-"""
-Complete the script.
-"""

@@ -1,0 +1,22 @@
+2023-05-06 10:34:59,793 =============================================================
+2023-05-06 10:34:59,793 =============================================================
+2023-05-06 10:34:59,794 Today is 2023-05-06 at 10:34 AM
+2023-05-06 10:34:59,852 This file is running on: nt Windows 10
+2023-05-06 10:34:59,852 The Python version is: 3.11.3
+2023-05-06 10:34:59,853 The active conda environment is:  None
+2023-05-06 10:34:59,853 The active pip environment is:    None
+2023-05-06 10:34:59,853 The active environment path is:   C:\Users\deniselive\AppData\Local\Programs\Python\Python311
+2023-05-06 10:34:59,853 The current working directory is: C:\Users\deniselive\Documents\datafun-01-getting-started
+2023-05-06 10:34:59,853 This source file is in:           c:\Users\deniselive\Documents\datafun-01-getting-started
+2023-05-06 10:34:59,853 =============================================================
+2023-05-06 10:34:59,853 =============================================================
+2023-05-06 10:34:59,853 Name: John Doe 
+2023-05-06 10:34:59,853 State: California
+2023-05-06 10:34:59,853 Country: USA
+2023-05-06 10:34:59,854 Pet count: 1
+2023-05-06 10:34:59,854 Skill count: 24
+2023-05-06 10:34:59,854 Temperature: 81.5
+2023-05-06 10:34:59,854 Pet weight: 12.5
+2023-05-06 10:34:59,854 Has dog: False
+2023-05-06 10:34:59,854 Likes analytics: True
+2023-05-06 10:34:59,854 Likes Python: True

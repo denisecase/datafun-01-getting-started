@@ -1,23 +1,23 @@
 """
 
-This example illustrates stats using the built-in statistics module.
+Purpose: Illustrate the built-in statistics module.
 
 VS Code Menu / View / Command Palette / Python Interpretor
 Must be 3.10 or greater to get the correlation and linear regression.
 
 Uses only Python Standard Library modules.
 
+@ uses statistics module for descriptive stats
+@ uses turtle module for drawing a chart
+@ uses sys module for checking Python version
+
 """
+import statistics 
+import turtle  
+import sys  
 
-# imports at the top of the file
-
-import statistics  # for descriptive stats
-import turtle  # for drawing a chart
-import sys  # for checking Python version
-
-# is the user ready to see a chart?
-
-ready_for_chart = True  # edit this when ready
+from util_datafun_logger import setup_logger
+logger, logname = setup_logger(__file__)
 
 # Descriptive: Univariant Data..................................
 
@@ -74,12 +74,19 @@ uni_data = [
     109,
     104,
 ]
+logger.info("uni_data = " + str(uni_data))
 
 # Descriptive: Averages and measures of central tendency
 
 mean = statistics.mean(uni_data)
 median = statistics.median(uni_data)
 mode = statistics.mode(uni_data)
+
+# log use variable colon formatting to avoid unnecessary digits (e.g. .2f)
+
+logger.info(f"mean   = {mean:.2f}")  
+logger.info(f"median = {median:.2f}")
+logger.info(f"mode   = {mode:.2f}")
 
 # Descriptive: Measures of spread
 
@@ -88,21 +95,12 @@ stdev = statistics.stdev(uni_data)
 lowest = min(uni_data)
 highest = max(uni_data)
 
-# use variable colon formatting to avoid unnecessary digits (e.g. .2f)
-print()
-print("=============================================================")
-print()
-print(f"Here's some univariant data (1 variable, many readings): {uni_data}")
-print()
-print("Descriptive statistics include measures of central tendancy:")
-print(f"   mean={mean:.2f}")
-print(f"   median={median:.2f}")
-print(f"   mode={mode:.2f}")
-print()
-print("Descriptive statistics include measures of spread:")
-print(f"   var={var:.2f}")
-print(f"   stddev={stdev:.2f}")
-print()
+# TODO: change to f-strings and use 2 decimal places (like we did above)
+logger.info("var    = " + str(var))
+logger.info("stdev  = " + str(stdev))
+logger.info("lowest = " + str(lowest))
+logger.info("highest= " + str(highest))
+
 
 # Descriptive: Univariant Timeseries Data.........................
 
@@ -114,51 +112,33 @@ xtimes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 yvalues = [2, 5, 8, 20, 21, 23, 24, 27, 30, 31, 31, 32]
 
 # if the lists are not the same size,
-# print an error and quit the program
+# log an error and quit the program
 if len(xtimes) != len(yvalues):
-    print("ERROR: The related sets are not the same size.")
-    print(f"      {len(xtimes)}!={len(yvalues)}")
+    logger.error("ERROR: The related sets are not the same size.")
+    logger.error(f"      {len(xtimes)}!={len(yvalues)}")
     quit()
 
-print("Correlation requires Python version 3.10 or greater.")
-print(f"Your version is {sys.version_info.major}.{sys.version_info.minor}")
+# check the Python version before using the correlation function
+logger.warn("Correlation requires Python version 3.10 or greater.")
+logger.warn(f"Your version is {sys.version_info.major}.{sys.version_info.minor}")
 
+# if the Python version is too old, we can quit now
 if sys.version_info.minor < 10:
-    print()
-    print("Please update Python to 3.10 or greater")
-    print("or use View / Command Palette / Python: Select Interpreter")
-    print("to get a newer one.")
-    print()
+    logger.error("Please update Python to 3.10 or greater")
+    logger.error("or use View / Command Palette / Python: Select Interpreter")
+    logger.error("to get a newer one.")
     quit()
 
-# If we're still here, use the correlation function
+# If we're still here, use the correlation function from the statistics module
 xx_corr = statistics.correlation(xtimes, xtimes)
 xy_corr = statistics.correlation(xtimes, yvalues)
 
-# share what we learned
-print()
-print("=============================================================")
-print()
-print("Here's some time series data:")
-print()
-print(f"xtimes:{xtimes}")
-print()
-print(f"yvalues:{yvalues}")
-print()
-print(
-    "Descriptive stats for time series may include measures of",
-    "relationshiop or correlation:",
-)
-print()
-print(f"   correlation between xtimes and xtimes = {xx_corr:.2f}")
-print(f"   correlation between xtimes and yvalues = { xy_corr:.2f}")
-print()
-print(
-    "Learn what else is possible at",
-    "https://docs.python.org/3/library/statistics.html.",
-)
-print()
-
+# log the information 
+logger.info("Here's some time series data:")
+logger.info(f"xtimes:{xtimes}")
+logger.info(f"yvalues:{yvalues}")
+logger.info(f"correlation between xtimes and xtimes = {xx_corr:.2f}")
+logger.info(f"correlation between xtimes and yvalues = {xy_corr:.2f}")
 
 # Calculate slope and intercept of a line
 
@@ -179,33 +159,25 @@ future_x = 200
 # and read the value (of future y)
 future_y = round(slope * future_x + intercept)
 
-print()
-print("=============================================================")
-print()
-print("Here's some bivariant data (2 variables, together):")
-print()
-print(f"x:{arrayX}")
-print()
-print(f"y:{arrayY}")
-print()
-print("Calculate the slope and intercept of a best fit straight line:")
-print()
-print(f"   slope = {slope:.2f}")
-print(f"   intercept = { intercept:.2f}")
-print()
-print("Let's use our best fit line to PREDICT a future value.")
-print()
-print(f"   At future x = {future_x:d},")
-print(f"   we predict the value of y will be { future_y:d}.")
-print()
-print("How'd we do? Does this make sense given the data?")
-print()
-print("Remember to close the app. Control c (or d or z maybe) to close it.")
-print()
+logger.info("Here's some bivariant data (2 variables, together):")
+logger.info(f"x:{arrayX}")
+logger.info(f"y:{arrayY}")
+logger.info("Calculate the slope and intercept of a best fit straight line:")
+logger.info(f"   slope = {slope:.2f}")
+logger.info(f"   intercept = { intercept:.2f}")
+logger.info("Let's use our best fit line to PREDICT a future value.")
+logger.info(f"   At future x = {future_x:d},")
+logger.info(f"   we predict the value of y will be { future_y:d}.")
+logger.info("How'd we do? Does this make sense given the data?")
+logger.info("Remember to close the app. Control c (or d or z maybe) to close it.")
 
+# is the user ready to see a chart?
+# TODO: change this to True when ready
+ready_for_chart = False
 
-# if ready for the chart, let's show
-# the data, the best fit line, and the future prediction
+logger.info(f"ready_for_chart = {ready_for_chart}")
+
+# if ready for the chart, show the data, the best fit line, and the future prediction
 
 if ready_for_chart:
 
@@ -257,8 +229,11 @@ if ready_for_chart:
 
     turtle.done()
     screen.mainloop()
-    print()
+    logger.info("Done with the chart.")
 
 else:
-    print("Ready for a chart? Edit this program to see an illustration.")
-    print()
+    logger.info("Ready for a chart? Edit this program to see an illustration.\n")
+
+# Use built-in open() function to read log file and print it to the terminal
+with open(logname, 'r') as file_wrapper:
+    print(file_wrapper.read())

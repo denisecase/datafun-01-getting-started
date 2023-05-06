@@ -1,0 +1,19 @@
+2023-05-06 10:35:11,252 =============================================================
+2023-05-06 10:35:11,252 =============================================================
+2023-05-06 10:35:11,252 Today is 2023-05-06 at 10:35 AM
+2023-05-06 10:35:11,291 This file is running on: nt Windows 10
+2023-05-06 10:35:11,292 The Python version is: 3.11.3
+2023-05-06 10:35:11,292 The active conda environment is:  None
+2023-05-06 10:35:11,292 The active pip environment is:    None
+2023-05-06 10:35:11,292 The active environment path is:   C:\Users\deniselive\AppData\Local\Programs\Python\Python311
+2023-05-06 10:35:11,308 The current working directory is: C:\Users\deniselive\Documents\datafun-01-getting-started
+2023-05-06 10:35:11,309 This source file is in:           c:\Users\deniselive\Documents\datafun-01-getting-started
+2023-05-06 10:35:11,309 =============================================================
+2023-05-06 10:35:11,309 =============================================================
+2023-05-06 10:35:11,309 Functions url = https://docs.python.org/3/library/functions.html
+2023-05-06 10:35:11,309 number_list = [1, 2, 3, 4, 5]
+2023-05-06 10:35:11,309 len(number_list) = 5
+2023-05-06 10:35:11,309 min(number_list) = 1
+2023-05-06 10:35:11,309 max(number_list) = 5
+2023-05-06 10:35:15,424 message = Hello C:\users\deniselive\documents\datafun-01-getting-starteddenise!
+2023-05-06 10:35:18,182 response = n
