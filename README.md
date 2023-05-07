@@ -98,6 +98,14 @@ Download and install Python 3.
   python --version
   ```
 
+Install some essential Python packages into the default Python environment.
+
+```shell
+python -m pip install --upgrade pip build setuptools wheel 
+python -m pip install --upgrade black ruff
+python -m pip install --upgrade ipykernel jupyterlab
+```
+
 ### Install VS Code Editor
 
 Download and install VS Code. 
