@@ -1,0 +1,22 @@
+2023-05-12 17:23:53,135 =============================================================
+2023-05-12 17:23:53,136 =============================================================
+2023-05-12 17:23:53,136 Today is 2023-05-12 at 05:23 PM
+2023-05-12 17:23:53,136 This file is running on: posix Darwin 21.6.0
+2023-05-12 17:23:53,136 The Python version is: 3.9.6
+2023-05-12 17:23:53,136 The active conda environment is:  None
+2023-05-12 17:23:53,136 The active pip environment is:    None
+2023-05-12 17:23:53,136 The active environment path is:   /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9
+2023-05-12 17:23:53,136 The current working directory is: /Users/Inga/Documents/datafun-01-getting-started-1
+2023-05-12 17:23:53,136 This source file is in:           /Users/Inga/Documents/datafun-01-getting-started-1
+2023-05-12 17:23:53,136 =============================================================
+2023-05-12 17:23:53,137 =============================================================
+2023-05-12 17:23:53,137 Name: John Doe 
+2023-05-12 17:23:53,137 State: California
+2023-05-12 17:23:53,137 Country: USA
+2023-05-12 17:23:53,137 Pet count: 1
+2023-05-12 17:23:53,137 Skill count: 24
+2023-05-12 17:23:53,137 Temperature: 81.5
+2023-05-12 17:23:53,137 Pet weight: 12.5
+2023-05-12 17:23:53,137 Has dog: False
+2023-05-12 17:23:53,137 Likes analytics: True
+2023-05-12 17:23:53,137 Likes Python: True

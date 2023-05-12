@@ -1,0 +1,15 @@
+2023-05-12 17:24:20,488 =============================================================
+2023-05-12 17:24:20,488 =============================================================
+2023-05-12 17:24:20,488 Today is 2023-05-12 at 05:24 PM
+2023-05-12 17:24:20,488 This file is running on: posix Darwin 21.6.0
+2023-05-12 17:24:20,488 The Python version is: 3.9.6
+2023-05-12 17:24:20,488 The active conda environment is:  None
+2023-05-12 17:24:20,488 The active pip environment is:    None
+2023-05-12 17:24:20,488 The active environment path is:   /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9
+2023-05-12 17:24:20,488 The current working directory is: /Users/Inga/Documents/datafun-01-getting-started-1
+2023-05-12 17:24:20,489 This source file is in:           /Users/Inga/Documents/datafun-01-getting-started-1
+2023-05-12 17:24:20,489 =============================================================
+2023-05-12 17:24:20,489 =============================================================
+2023-05-12 17:24:20,489 Given base=10 and height=5, the triangle area = 25.0
+2023-05-12 17:24:20,489 Given a=1.1 and b=2.2, the sum = 3.3000000000000003
+2023-05-12 17:24:20,489 Given i=50 and j=20, the difference = 30

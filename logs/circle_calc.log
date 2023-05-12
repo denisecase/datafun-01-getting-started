@@ -1,0 +1,16 @@
+2023-05-12 17:25:04,962 =============================================================
+2023-05-12 17:25:04,962 =============================================================
+2023-05-12 17:25:04,962 Today is 2023-05-12 at 05:25 PM
+2023-05-12 17:25:04,962 This file is running on: posix Darwin 21.6.0
+2023-05-12 17:25:04,962 The Python version is: 3.9.6
+2023-05-12 17:25:04,963 The active conda environment is:  None
+2023-05-12 17:25:04,963 The active pip environment is:    None
+2023-05-12 17:25:04,963 The active environment path is:   /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9
+2023-05-12 17:25:04,963 The current working directory is: /Users/Inga/Documents/datafun-01-getting-started-1
+2023-05-12 17:25:04,963 This source file is in:           /Users/Inga/Documents/datafun-01-getting-started-1
+2023-05-12 17:25:04,963 =============================================================
+2023-05-12 17:25:04,963 =============================================================
+2023-05-12 17:25:08,703 The area of a circle with radius 4.0 is 50.26548245743669.
+2023-05-12 17:25:08,703 Eww... that's a lot of decimal places - tmi!
+2023-05-12 17:25:08,703 The area of a circle with radius 4.0 is 50.27.
+2023-05-12 17:25:08,704 Much better!

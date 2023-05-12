@@ -1,7 +1,7 @@
 """
 Purpose: Illustrate basic functions in Python.
 
-Author: Denise Case
+Author: Inga Miller
 
 This file name is:   basic_functions.py
 This module name is: basic_functions
@@ -81,4 +81,9 @@ if response == "y":
     print("We'll learn more about them later.")
     print()
 
-# TODO: Run with different responses n, y, other...
+# TODO: Run with different responses n, y, other... other
+If response =="n":
+print()
+print("Let's open a window.  Fresh air is nice!")
+webbrowser.open_new(url)
+print()

@@ -1,0 +1,17 @@
+2023-05-12 17:25:29,856 =============================================================
+2023-05-12 17:25:29,856 =============================================================
+2023-05-12 17:25:29,857 Today is 2023-05-12 at 05:25 PM
+2023-05-12 17:25:29,857 This file is running on: posix Darwin 21.6.0
+2023-05-12 17:25:29,857 The Python version is: 3.9.6
+2023-05-12 17:25:29,857 The active conda environment is:  None
+2023-05-12 17:25:29,857 The active pip environment is:    None
+2023-05-12 17:25:29,857 The active environment path is:   /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9
+2023-05-12 17:25:29,857 The current working directory is: /Users/Inga/Documents/datafun-01-getting-started-1
+2023-05-12 17:25:29,857 This source file is in:           /Users/Inga/Documents/datafun-01-getting-started-1
+2023-05-12 17:25:29,857 =============================================================
+2023-05-12 17:25:29,857 =============================================================
+2023-05-12 17:25:29,860 Read data from data/inputs.csv:
+[['animal', 'weight_lbs', 'age_years', 'visit_cost'], ['cat', '14.7', '3', '100.0'], ['dog', '89.4', '5', '100.0'], ['lizard', '0.85', '1', '100.0']]
+2023-05-12 17:25:29,860 Wrote data to data/outputs.csv:
+[['animal', 'weight_lbs', 'age_years', 'visit_cost'], ('cat', '14.7', '3', 200.0), ('dog', '89.4', '5', 200.0), ('lizard', '0.85', '1', 200.0)]
+2023-05-12 17:25:29,861 Check out the new files in the data folder.

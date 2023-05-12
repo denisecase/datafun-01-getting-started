@@ -1,0 +1,25 @@
+2023-05-12 17:25:45,983 =============================================================
+2023-05-12 17:25:45,983 =============================================================
+2023-05-12 17:25:45,984 Today is 2023-05-12 at 05:25 PM
+2023-05-12 17:25:45,984 This file is running on: posix Darwin 21.6.0
+2023-05-12 17:25:45,984 The Python version is: 3.9.6
+2023-05-12 17:25:45,984 The active conda environment is:  None
+2023-05-12 17:25:45,984 The active pip environment is:    None
+2023-05-12 17:25:45,984 The active environment path is:   /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9
+2023-05-12 17:25:45,984 The current working directory is: /Users/Inga/Documents/datafun-01-getting-started-1
+2023-05-12 17:25:45,984 This source file is in:           /Users/Inga/Documents/datafun-01-getting-started-1
+2023-05-12 17:25:45,984 =============================================================
+2023-05-12 17:25:45,984 =============================================================
+2023-05-12 17:25:45,984 uni_data = [105, 129, 87, 86, 111, 111, 89, 81, 108, 92, 110, 100, 75, 105, 103, 109, 76, 119, 99, 91, 103, 129, 106, 101, 84, 111, 74, 87, 86, 103, 103, 106, 86, 111, 75, 87, 102, 121, 111, 88, 89, 101, 106, 95, 103, 107, 101, 81, 109, 104]
+2023-05-12 17:25:45,985 mean   = 99.12
+2023-05-12 17:25:45,985 median = 102.50
+2023-05-12 17:25:45,985 mode   = 111.00
+2023-05-12 17:25:45,985 var    = 179.25061224489795
+2023-05-12 17:25:45,985 stdev  = 13.388450703681062
+2023-05-12 17:25:45,985 lowest = 74
+2023-05-12 17:25:45,986 highest= 129
+2023-05-12 17:25:45,986 Correlation requires Python version 3.10 or greater.
+2023-05-12 17:25:45,986 Your version is 3.9
+2023-05-12 17:25:45,986 Please update Python to 3.10 or greater
+2023-05-12 17:25:45,986 or use View / Command Palette / Python: Select Interpreter
+2023-05-12 17:25:45,986 to get a newer one.
