@@ -2,26 +2,36 @@
 
 Purpose: Illustrate the built-in statistics module.
 
-VS Code Menu / View / Command Palette / Python Interpretor
+VS Code Menu / View / Command Palette / Python Interpreter
 Must be 3.10 or greater to get the correlation and linear regression.
 
 Uses only Python Standard Library modules.
 
 @ uses statistics module for descriptive stats
-@ uses turtle module for drawing a chart
 @ uses sys module for checking Python version
 
 """
-import statistics 
-import turtle  
-import sys  
+# ----------------- INSTRUCTOR GENERATED CODE -----------------
 
-from util_datafun_logger import setup_logger
+# Use this handy logger to document your work automatically
+
+# import setup_logger function from instructor-generated module
+from util_logger import setup_logger
+
+# setup the logger using the current file name (a built-in variable)
 logger, logname = setup_logger(__file__)
+
+# ----------------- END INSTRUCTOR GENERATED CODE -----------------
+
+
+# Import from Python Standard Library
+
+import statistics
+import sys
 
 # Descriptive: Univariant Data..................................
 
-# univariant data (one varabile, many readings)
+# univariant data (one variable, many readings)
 uni_data = [
     105,
     129,
@@ -84,7 +94,7 @@ mode = statistics.mode(uni_data)
 
 # log use variable colon formatting to avoid unnecessary digits (e.g. .2f)
 
-logger.info(f"mean   = {mean:.2f}")  
+logger.info(f"mean   = {mean:.2f}")
 logger.info(f"median = {median:.2f}")
 logger.info(f"mode   = {mode:.2f}")
 
@@ -95,17 +105,17 @@ stdev = statistics.stdev(uni_data)
 lowest = min(uni_data)
 highest = max(uni_data)
 
-# TODO: change to f-strings and use 2 decimal places (like we did above)
+# TODO: change to f-strings and display 2 decimal places (like we did above)
 logger.info("var    = " + str(var))
 logger.info("stdev  = " + str(stdev))
 logger.info("lowest = " + str(lowest))
 logger.info("highest= " + str(highest))
 
 
-# Descriptive: Univariant Timeseries Data.........................
+# Descriptive: Univariant Time Series Data.........................
 
 # describe relationships
-# univariant time series data (one varabile over time)
+# univariant time series data (one variable over time)
 # typically, x (or time) is independent and
 # y is dependent on x (e.g. temperature vs hour of day)
 xtimes = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -129,11 +139,11 @@ if sys.version_info.minor < 10:
     logger.error("to get a newer one.")
     quit()
 
-# If we're still here, use the correlation function from the statistics module
+# If we're still here, use the new correlation function from the statistics module
 xx_corr = statistics.correlation(xtimes, xtimes)
 xy_corr = statistics.correlation(xtimes, yvalues)
 
-# log the information 
+# log the information
 logger.info("Here's some time series data:")
 logger.info(f"xtimes:{xtimes}")
 logger.info(f"yvalues:{yvalues}")
@@ -169,71 +179,3 @@ logger.info("Let's use our best fit line to PREDICT a future value.")
 logger.info(f"   At future x = {future_x:d},")
 logger.info(f"   we predict the value of y will be { future_y:d}.")
 logger.info("How'd we do? Does this make sense given the data?")
-logger.info("Remember to close the app. Control c (or d or z maybe) to close it.")
-
-# is the user ready to see a chart?
-# TODO: change this to True when ready
-ready_for_chart = False
-
-logger.info(f"ready_for_chart = {ready_for_chart}")
-
-# if ready for the chart, show the data, the best fit line, and the future prediction
-
-if ready_for_chart:
-
-    screen = turtle.Screen()
-    screen.title("Linear Regression and Prediction")
-    screen.bgcolor("white")
-
-    t = turtle.Turtle()
-    t.speed(3)  # range 1-10  (slow-fast)
-
-    w, h = screen.window_width(), screen.window_height()
-    # e.g. 512, 480
-
-    # Draw Axes
-    t.penup()
-    t.goto(w / 2, 0)
-    t.pendown()
-    t.goto(-w / 2, 0)
-    t.penup()
-    t.goto(0, h / 2)
-    t.pendown()
-    t.goto(0, -h / 2)
-
-    # draw points
-    for index, year in enumerate(arrayX):
-        t.penup()
-        t.goto(arrayX[index], arrayY[index])
-        t.pendown()
-        t.pencolor("blue")
-        t.dot(20)
-
-    # draw best-fit line
-    h = int(slope * w + intercept)
-    t.penup()
-    t.goto(w, h)
-    w = -w
-    h = int(slope * w + intercept)
-    t.pencolor("green")
-    t.pensize(2)
-    t.pendown()
-    t.goto(w, h)
-
-    # draw prediction dot
-    t.penup()
-    t.goto(future_x, future_y)
-    t.pendown()
-    t.pencolor("red")
-    t.dot(20)
-
-    turtle.done()
-    screen.mainloop()
-    logger.info("Done with the chart.")
-
-else:
-    logger.info("Ready for a chart? Edit this program to see an illustration.\n")
-
-# Use built-in open() function to read log file and print it to the terminal
-with open(logname, 'r') as file_wrapper:
-    print(file_wrapper.read())

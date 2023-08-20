@@ -30,44 +30,55 @@ int() is a built-in function that converts a value to an integer.
 
 @ uses webbrowser module to open a web browser to a url
 """
-import webbrowser
+# ----------------- INSTRUCTOR GENERATED CODE -----------------
 
-from util_datafun_logger import setup_logger
+# Use this handy logger to document your work automatically
+
+# import setup_logger function from instructor-generated module
+from util_logger import setup_logger
+
+# setup the logger using the current file name (a built-in variable)
 logger, logname = setup_logger(__file__)
 
-# Declare some variables
+# ----------------- END INSTRUCTOR GENERATED CODE -----------------
+
+# Import from Python Standard Library
+
+import webbrowser
+
+
+# Declare Variables
 url = "https://docs.python.org/3/library/functions.html"
 number_list = [1, 2, 3, 4, 5]
 
-# Try some built-in functions like len(), min(), max()
+# Use built-in functions like len(), min(), max()
 length = len(number_list)
 smallest = min(number_list)
 largest = max(number_list)
 hint = "HINT: In the terminal, hit up arrow to rerun a command and try again.\n"
 
-# Log some information 
+# Log Information
 logger.info(f"Functions url = {url}")
 logger.info(f"number_list = {number_list}")
 logger.info(f"len(number_list) = {length}")
 logger.info(f"min(number_list) = {smallest}")
 logger.info(f"max(number_list) = {largest}")
 
-# print an empty line to the terminal
+# Print an empty line to the terminal
 print()
 
-# print a string to the terminal
+# Greet the user
 print("Greetings!")
 
-# get input from the user
-name = input("What's your name? (type your name and hit enter):")
-
-# use what you got (their name) to print a greeting
-message = "Hello " + name.capitalize() + "!"
+# Get the user's name and greet them
+name = input("What's your name? (type your name and hit enter): ")
+message = f"Hello {name.capitalize()}!"
 print(message)
 print()
 logger.info(f"message = {message}")
 
-response = input("Would you like to see all the built-in functions? (y/n)")
+# Ask the user if they want to see built-in functions
+response = input("Would you like to see all the built-in functions? (y/n) ").lower()
 logger.info(f"response = {response}")
 print(f"You said {response}!")
 print(f"{hint}")

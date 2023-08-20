@@ -1,5 +1,5 @@
 """
-Purpose: Illustrate basic expresssions and operators in Python.
+Purpose: Illustrate basic expressions and operators in Python.
 
 Author: Denise Case
 
@@ -24,31 +24,40 @@ Writing expressions in Python is like writing formulas in Excel.
  
 """
 
-from util_datafun_logger import setup_logger
-logger,logname = setup_logger(__file__)
+# ----------------- INSTRUCTOR GENERATED CODE -----------------
 
-# Declare some variables 
+# Use this handy logger to document your work automatically
+
+# import setup_logger function from instructor-generated module
+from util_logger import setup_logger
+
+# setup the logger using the current file name (a built-in variable)
+logger, logname = setup_logger(__file__)
+
+# ----------------- END INSTRUCTOR GENERATED CODE -----------------
+
+# Declare  Variables
 # TODO: Try changing the values of these variables
-# TODO: Add some new variables and calculate the area of a rectangle ()
+# TODO: Add some new variables (like rectangle_length and rectangle_width)
+#       and calculate the area of a rectangle (rectangle_area = rectangle_length * rectangle_width)
 triangle_base = 10
 triangle_height = 5
-i = 50
-j = 20
-a = 1.1
-b = 2.2
-c = 3.3
+num1 = 50
+num2 = 20
+float_num1 = 1.1
+float_num2 = 2.2
+float_num3 = 3.3
 
-# Try some operators (multiply, divide, add, subtract)
+# Basic Arithmetic Operations
 triangle_area = triangle_base * triangle_height / 2
-sum = a + b
-difference = i - j
+total_sum = float_num1 + float_num2
+difference = num1 - num2
 
-# Log some information using f-strings (formatted strings)
-logger.info(f"Given base={triangle_base} and height={triangle_height}, the triangle area = {triangle_area}")
-logger.info(f"Given a={a} and b={b}, the sum = {sum}")
-logger.info(f"Given i={i} and j={j}, the difference = {difference}")
-
-
-# Use built-in open() function to read the log file and print it to the terminal
-with open(logname, 'r') as file_wrapper:
-    print(file_wrapper.read())
+# Log Information
+logger.info(
+    f"Given base={triangle_base} and height={triangle_height}, triangle area = {triangle_area}"
+)
+logger.info(
+    f"Given float_num1={float_num1} and float_num2={float_num2}, sum = {total_sum}"
+)
+logger.info(f"Given num1={num1} and num2={num2}, the difference = {difference}")

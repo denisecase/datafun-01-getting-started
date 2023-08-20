@@ -19,10 +19,21 @@ All scripts in this repository use only the standard library.
 @uses math module for pi constant
 
 """
-import math  
+# ----------------- INSTRUCTOR GENERATED CODE -----------------
 
-from util_datafun_logger import setup_logger
+# Use this handy logger to document your work automatically
+
+# import setup_logger function from instructor-generated module
+from util_logger import setup_logger
+
+# setup the logger using the current file name (a built-in variable)
 logger, logname = setup_logger(__file__)
+
+# ----------------- END INSTRUCTOR GENERATED CODE -----------------
+
+# Import from Python Standard Library
+
+import math
 
 # Use the math module's constant for pi
 pi = math.pi
@@ -42,14 +53,12 @@ logger.info(f"The area of a circle with radius {radius} is {area}.")
 logger.info("Eww... that's a lot of decimal places - tmi!")
 
 
-# round the area to two decimal places
-area = round(area, 2)
+# TODO Round the area to two decimal places.
+# Pass in 2 arguments to the round() function.
+#     The first argument is the value to round.
+#     The second argument is the number of decimal places (make it 2 not 12)
+area = round(area, 12)
 
 # log the results
 logger.info(f"The area of a circle with radius {radius} is {area}.")
-logger.info("Much better!")
-
-
-# Use built-in open() function to read log file and print it to the terminal
-with open(logname, 'r') as file_wrapper:
-    print(file_wrapper.read())
+logger.info("Much better! (After you fix it.)")
